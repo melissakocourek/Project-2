@@ -1,0 +1,22 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body text-center">
+            <div>
+                <button id="skip">skip</button>
+            </div>
+            <h1><i class="fab fa-node-js fa-3x"></i></h1>
+            <p>Add To You Schedule</p>
+            <a href="/users/addPractice" class="btn btn-primary btn-block mb-2">Add Practice</a>
+            <a href="/users/addGame" class="btn btn-secondary btn-block">Add Game</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $("#skip").on("click", function () {
+        window.location = "/dashboard";
+    });
+
+
+
+</script>

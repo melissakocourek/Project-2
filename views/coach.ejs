@@ -1,0 +1,72 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <img src="/images/triangle7_S.png" class="card-img-top" alt="logo of seven v seven">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i> Register
+            </h1>
+            {{!-- <% include ./partials/messages %> --}}
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" firstName="firstName" class="form-control"
+                        placeholder="Enter First Name" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" lastName="lastName" class="form-control"
+                        placeholder="Enter Last Name" />
+                </div>
+                <div class="form-group">
+                    <label for="teamName">Team Name:</label>
+                    <input type="text" name="teamName" id="teamName" class="form-control" placeholder="Tonka United"></div>
+                <div class="form-group">
+                    <label for="emailAddress">Email:</label>
+                    <input type="emailAddress" id="emailAddress" name="emailAddress" class="form-control"
+                        placeholder="Enter Email Address:" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Create Password" />
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password:</label>
+                    <input type="password" id="password2" name="password2" class="form-control"
+                        placeholder="Confirm Password" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="submit">
+                    Register
+                </button>
+            </form>
+            <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $("#submit").on("click",
+
+        // A function to handle what happens when the form is submitted to create a new Coach
+        function handleCoachFormSubmit(event) {
+            event.preventDefault();
+            // Don't do anything if the name fields hasn't been filled out
+
+            // Constructing a newPost object to hand to the database
+            var newCoach = {
+                firstName: $("#firstName").val(),
+                lastName: $("#lastName").val(),
+                email: $("#emailAddress").val(),
+                teamName: $("#teamName").val(),
+                password: $("password").val(),
+                password2: $("password2").val()
+            };
+
+            $.post("/coaches", newCoach).then(function (data) {
+                console.log(data);
+
+            });
+            window.location = "/addSchedule";
+        });
+</script>

@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin-top: -5px;
+}
+body {
+  margin: 0 auto;
+  background-image: url("../1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Thasadith", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.container {
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+}
+
+img {
+  padding-bottom: -50px;
+  margin: 0 auto;
+  width: 30%;
+  height: 30%;
+}
+
+.form-inline {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 auto;
+  width: 400px;
+  line-height: 30px;
+}
+
+.dropdown-menu {
+  padding: 10px;
+}
+table {
+  table-layout: fixed;
+}
+
+button {
+  margin: 10px;
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#btnGroupDrop1 #btnGroupDrop2 #btnGroupDrop5 {
+  padding: 5px;
+  display: inline-block;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+/* Footer*/
+
+.footer {
+  position: fixed;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}

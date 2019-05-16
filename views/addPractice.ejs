@@ -1,0 +1,74 @@
+<h1>practice</h1>
+
+<h1>Team name</h1>
+{{!-- ----------------------------------------------- --}}
+<div class="section1">
+    <div>
+        <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <input data-provide="datepicker">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+            </div>
+        </div>
+    </div>
+    <div class="dates"><input type="text" style="width:200px;background-color:#aed6f1;" class="form-control" id="user1" name="event_date"
+        placeholder="YYYY-MM-DD" autocomplete="off"></div>
+    
+    <footer id="overview">Overview</footer>
+    <footer id="viewSchedule">View Schedule</footer>
+    <footer id="viewRoster">View Roster</footer>
+</div>
+{{!-- ----------------------------------------------- --}}
+<link rel="stylesheet" href="../public/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="../public/js/bootstrap-datepicker.js">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.dates #usr1').datepicker({
+            'format': 'yyyy-mm-dd',
+            'autoclose': true
+        });
+    });
+
+    $('.datepicker').datepicker();
+    $("#addPlayer").on("click", function () {
+        window.location = "/addPlayer";
+    });
+
+    $("#viewSchedule").on("click", function () {
+        window.location = "/viewSchedule";
+    });
+
+    $("#overview").on("click", function () {
+        window.location = "/dashboard";
+    });
+
+    $("#viewRoster").on("click", function () {
+        window.location = "/viewRoster";
+    });
+
+    $("#addGame").on("click", function () {
+        window.location = "/addGame";
+    });
+
+    $("#addPractice").on("click", function () {
+        window.location = "/addPractice";
+    });
+
+    $("#eventCancel").on("click", function () {
+        closeForm();
+    });
+
+    $("#scheduleEvent").on("click", function () {
+        openForm();
+    });
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>

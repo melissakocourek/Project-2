@@ -1,0 +1,61 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">Seven V Seven</h1>
+      <img
+        src="/images/triangle7_S.png"
+        class="card-img-top"
+        alt="logo of seven v seven"
+      />
+      <h1 class="text-center mb-3">Team</h1>
+
+      <button class="btn btn-light btn-block" id="addGame">Add Game</button>
+      <button class="btn btn-light btn-block" id="addPractice">
+        Add Practice
+      </button>
+      <button class="btn btn-light btn-block" id="addPlayer">Add player</button>
+      <div class="btn-group mt-2">
+        <button type="button" class="btn btn-outline-success" id="overview">
+          Overview
+        </button>
+        <button type="button" class="btn btn-outline-success" id="viewSchedule">
+          View Schedule
+        </button>
+        <button type="button" class="btn btn-outline-success" id="viewRoster">
+          View Roster
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+></script>
+<script>
+  $("#addPlayer").on("click", function() {
+    window.location = "/addPlayer";
+  });
+
+  $("#viewSchedule").on("click", function() {
+    window.location = "/viewSchedule";
+  });
+
+  $("#overview").on("click", function() {
+    window.location = "/coach_dashboard";
+  });
+
+  $("#viewRoster").on("click", function() {
+    window.location = "/viewRoster";
+  });
+
+  $("#addGame").on("click", function() {
+    window.location = "/addGame";
+  });
+
+  $("#addPractice").on("click", function() {
+    window.location = "/addPractice";
+  });
+
+</script>

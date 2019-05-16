@@ -1,0 +1,70 @@
+<h1>game</h1>
+
+<h1>Team name</h1>
+{{!-- ----------------------------------------------- --}}
+<div class="section1">
+    <div id="mainNav">
+        <form action="">
+            <label for="firstName">Player's First Name:</label>
+            <input type="text" name="firstName" id="firstName">
+
+            <label for="lastName">Player's Last Name:</label>
+            <input type="text" name="lastName" id="lastName">
+
+            <label for="parentFirst">Parent's First Name:</label>
+            <input type="text" id="parentFirst" name="parentFirst">
+
+            <label for="parentLast">Parent's Last Name:</label>
+            <input type="text" id="parentLast" name="parentLast">
+        </form>
+        <button class="btn" id="addGame">Add Game</button>
+        <button class="btn" id="addPractice">Add Practice</button>
+        <button id="addPlayer">Add player</button>
+    </div>
+    <footer id="overview">Overview</footer>
+    <footer id="viewSchedule">View Schedule</footer>
+    <footer id="viewRoster">View Roster</footer>
+</div>
+{{!-- ----------------------------------------------- --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $("#addPlayer").on("click", function () {
+        window.location = "/addPlayer";
+    });
+
+    $("#viewSchedule").on("click", function () {
+        window.location = "/viewSchedule";
+    });
+
+    $("#overview").on("click", function () {
+        window.location = "/dashboard";
+    });
+
+    $("#viewRoster").on("click", function () {
+        window.location = "/viewRoster";
+    });
+
+    $("#addGame").on("click", function () {
+        window.location = "/addGame";
+    });
+
+    $("#addPractice").on("click", function () {
+        window.location = "/addPractice";
+    });
+
+    $("#eventCancel").on("click", function () {
+        closeForm();
+    });
+
+    $("#scheduleEvent").on("click", function () {
+        openForm();
+    });
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>

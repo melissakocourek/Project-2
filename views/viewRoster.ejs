@@ -1,0 +1,64 @@
+<h1>Team name</h1>
+<h1>Current Roster</h1>
+{{!-- ----------------------------------------------- --}}
+<div class="section1">
+    <div id="rosterView">
+
+    </div>
+    <footer id="overview">Overview</footer>
+    <footer id="viewSchedule">View Schedule</footer>
+    <footer id="viewRoster">View Roster</footer>
+</div>
+{{!-- ----------------------------------------------- --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $("#addPlayer").on("click", function () {
+        window.location = "/addPlayer";
+    });
+
+    $("#viewSchedule").on("click", function () {
+        window.location = "/viewSchedule";
+    });
+
+    $("#overview").on("click", function () {
+        window.location = "/dashboard";
+    });
+
+    $("#viewRoster").on("click", function () {
+        window.location = "/viewRoster";
+    });
+
+    $("#addGame").on("click", function () {
+        window.location = "/addGame";
+    });
+
+    $("#addPractice").on("click", function () {
+        window.location = "/addPractice";
+    });
+// work on rendering roster
+    renderRoster();
+
+    function initializeRows() {
+        $("#rosterView").empty();
+        var rowsToAdd = [];
+        for (var i = 0; i < players.length; i++) {
+            rowsToAdd.push(createNewRow(players[i]));
+        }
+        $("#rosterView").prepend(rowsToAdd);
+    }
+
+    function renderRoster() {
+        $.get("/api/roster", function (data) {
+            players = data;
+            initializeRows();
+        });
+    }
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>

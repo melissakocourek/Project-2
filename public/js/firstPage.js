@@ -1,0 +1,1 @@
+$("#cancel").on("click", location.replace("/"));
