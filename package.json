@@ -30,7 +30,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.16.1",
     "js-datepicker": "^4.0.10",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.4",
     "nodemon": "^1.19.0",
